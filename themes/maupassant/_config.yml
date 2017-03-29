@@ -54,9 +54,3 @@ css: css
 
 # Theme version
 version: 0.0.0
-
-#Feed Atom
-feed:
-  type: atom
-  path: atom.xml
-  limit: 30
