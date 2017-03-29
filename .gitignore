@@ -35,3 +35,10 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# hexo
+.DS_Store
+Thumbs.db
+db.json
+public/
+.deploy*/
