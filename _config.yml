@@ -3,16 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-author: John Doe
-language:
+title: Corey's Blog
+subtitle: 
+description: 
+author: Corey Fei
+email: fcx600@163.com
+language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://corey600.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -24,11 +25,11 @@ tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
-i18n_dir: :en
+i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :year-:month-:day#:title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
@@ -40,13 +41,16 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace:
 
 # Category & Tag
 default_category: uncategorized
 category_map:
 tag_map:
+  Nodejs: node
+  JavaScript: js
+  技术: tec
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
