@@ -1,0 +1,2 @@
+# static-blog
+static-blog
