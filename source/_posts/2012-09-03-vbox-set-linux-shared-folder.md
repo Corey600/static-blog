@@ -2,7 +2,7 @@
 layout: post
 title: VBox中设置Linux的共享文件夹
 date: 2012/09/03
-toc: true
+toc: false
 category:
   - 备忘
 tags:

@@ -2,7 +2,7 @@
 layout: post
 title: Ubuntu下SublimeText2的G++和Python配置
 date: 2013/02/07
-toc: true
+toc: false
 category : 备忘
 tags : [Ubuntu, SublimeText2, G++, Python]
 ---
@@ -11,31 +11,35 @@ tags : [Ubuntu, SublimeText2, G++, Python]
 
 g++配置:
 
-    {
-        "cmd": ["g++", "${file}", "-o", "${file_path}/${file_base_name}"],
-        "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
-        "working_dir": "${file_path}",
-        "selector": "source.c, source.c++",
+```
+{
+    "cmd": ["g++", "${file}", "-o", "${file_path}/${file_base_name}"],
+    "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+    "working_dir": "${file_path}",
+    "selector": "source.c, source.c++",
 
-        "variants":
-        [
-            {
-                "name": "Run",
-                "cmd":["x-terminal-emulator", "-x", "bash", "-c", "g++ '${file}' -o '${file_path}/${file_base_name}' && '${file_path}/${file_base_name}' ;read -n1 -p 'press any key to continue.'"]
-            }
-        ]
-    }
-    
+    "variants":
+    [
+        {
+            "name": "Run",
+            "cmd":["x-terminal-emulator", "-x", "bash", "-c", "g++ '${file}' -o '${file_path}/${file_base_name}' && '${file_path}/${file_base_name}' ;read -n1 -p 'press any key to continue.'"]
+        }
+    ]
+}
+```
+
 <!--more-->
 
 python配置:
 
-    {
-        "cmd":["x-terminal-emulator", "-x", "bash", "-c", "python -u '${file}' ;read -n1 -p 'press any key to continue.'"],
-        //"cmd": ["python", "-u", "$file"],
-        "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
-        "selector": "source.python"
-    }
+```
+{
+    "cmd":["x-terminal-emulator", "-x", "bash", "-c", "python -u '${file}' ;read -n1 -p 'press any key to continue.'"],
+    //"cmd": ["python", "-u", "$file"],
+    "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+    "selector": "source.python"
+}
+```
 
 说明：
 其中命令``x-terminal-emulator -x``是实现了跳出新的窗口，由于我用的是linux-mint，默认桌面环境是mate，如果是gnome那么命令可能应该是``gnome-terminal -x``。

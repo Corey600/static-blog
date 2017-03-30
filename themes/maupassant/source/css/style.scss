@@ -352,6 +352,19 @@ div {
             }
         }
     }
+    .comments-link-to {
+        padding: 10px;
+        border: solid 1px #ddd;
+        font-size: 14px;
+        .comments-email-to {
+            color: #01579f;
+            margin: 0 5px;
+        }
+        a {
+            color: #01579f;
+            margin: 0 5px;
+        }
+    }
 }
 
 .page-navigator {
@@ -442,6 +455,7 @@ div {
     }
     #sidebar {
         border-left-width: 0px;
+        padding-left: 0;
     }
     #header {
         .site-name {

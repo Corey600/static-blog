@@ -72,7 +72,9 @@ theme: maupassant
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/Corey600/corey600.github.io.git
+  branch: master
 
 Plugins:
   - hexo-generator-feed

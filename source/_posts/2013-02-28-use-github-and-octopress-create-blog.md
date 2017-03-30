@@ -15,7 +15,7 @@ tags: [Github, Octopress]
 
 当然，静态博客在简约的同时，我还是希望它能够在主题上好看协调一点，而且在写作上如果直接写html文件的话就显得十分吃力，这时候[OctoPress](http://octopress.org/)和[MarkDown](http://wowubuntu.com/markdown/)，这两位左右手就该上场了。前者是开源的静态博客系统，后者是是一种轻量级的标记语言。这三者互相搭配再加上第三方评论系统就基本能搞定像本博一样的静态博客了。
 
-### 以下是以windows7作为环境的全部安装过程
+_以下是以windows7作为环境的全部安装过程_
 
 #### 一、安装软件和Octopress博客系统
 
@@ -31,9 +31,11 @@ DevKit只需解压到一个文件夹
 
 然后启动Ruby命令框，用CD进入存放DevKit的目录，执行以下命令
 
-    ruby dk.rb init
-    ruby dk.rb install
-    
+```
+ruby dk.rb init
+ruby dk.rb install
+```
+
 ![Alt text](/images/20130228/dkiu2.jpg)
 
 Git安装只需按照提示默认点击下一步，在“Configuring the line ending conversions”界面选择换行格式，选择“Checkout as-is, commit Unix-style line endings”(参考链接：[Win7上Git安装及配置过程](http://www.cnblogs.com/sunny5156/archive/2012/10/23/2735799.html))，如下图
@@ -42,15 +44,19 @@ Git安装只需按照提示默认点击下一步，在“Configuring the line en
 
 安装Octopress前要改变一个软件更新源，运行命令
 
-    gem sources -a http://ruby.taobao.org/
-    gem sources -r http://rubygems.org/
-    gem sources -l
+```
+gem sources -a http://ruby.taobao.org/
+gem sources -r http://rubygems.org/
+gem sources -l
+```
 
 ![Alt text](/images/20130228/ociu.jpg)
 
 安装Octopress到D:\Blog(参考链接：[Octopress官方安装帮助](http://octopress.org/docs/setup/))，打开Git Bash，运行命令
 
-    git clone git://github.com/imathis/octopress.git /d/Blog
+```
+git clone git://github.com/imathis/octopress.git /d/Blog
+```
 
 ![Alt text](/images/20130228/ociu2.jpg)
 
@@ -60,21 +66,27 @@ Git安装只需按照提示默认点击下一步，在“Configuring the line en
 
 进入Octopress安装目录，安装bundler，运行命令
 
-    gem install bundler
-    bundle install
+```
+gem install bundler
+bundle install
+```
 
 ![Alt text](/images/20130228/ociu4.jpg)
 
 安装Octopress默认的主题，运行命令
 
-    rake install
+```
+rake install
+```
 
 ![Alt text](/images/20130228/ociu5.jpg)
 
 最后是生成和预览博客，运行命令
 
-    rake generate
-    rake preview
+```
+rake generate
+rake preview
+```
 
 ![Alt text](/images/20130228/ociu6.jpg)
 
@@ -94,9 +106,11 @@ Git安装只需按照提示默认点击下一步，在“Configuring the line en
 
 打开git bash，依次运行下列命令
 
-    git config --global user.name "用户名"
-    git config --global user.email "邮箱"
-    git config --global credential.helper cache
+```
+git config --global user.name "用户名"
+git config --global user.email "邮箱"
+git config --global credential.helper cache
+```
 
 ![Alt text](/images/20130228/gh2.jpg)
 
@@ -114,9 +128,11 @@ Git安装只需按照提示默认点击下一步，在“Configuring the line en
 
 最后进入博客安装目录``D:\Blog``运行如下命令，再打开你的Github的二级域名就可以看到刚刚提交的Octopress博客了
 
-    rake setup_github_pages
-    rake generate
-    rake deploy
+```
+rake setup_github_pages
+rake generate
+rake deploy
+```
 
 ![Alt text](/images/20130228/gh6.jpg)
 
@@ -124,38 +140,47 @@ Git安装只需按照提示默认点击下一步，在“Configuring the line en
 
 发布一个日志前，先在博客目录``D:\Blog\source\_posts\``中生成一个MD文件，类似``2013-03-10-title.markdown``，是日志的编辑文件。运行命令
 
-    rake new_post["title"]
+```
+rake new_post["title"]
+```
 
 如果想要新建一个页面，则可以运行命令
 
-    rake new_page["about"]
+```
+rake new_page["about"]
+```
 
 编辑MD文件需要使用markdown语法(参考链接：[Markdown 语法说明](http://wowubuntu.com/markdown/))。
 文章编辑完成后，生成和发布则运行命令
 
-    rake generate
-    rake deploy
+```
+rake generate
+rake deploy
+```
 
 本地预览命令。
 
-    rake preview
+```
+rake preview
+```
 
-退出预览命令是
-``Ctrl+C``
+退出预览命令是`Ctrl+C`
 
 #### 五、安装主题
 
 我现在用的主题是[justin-kelly](http://blog.justin.kelly.org.au/octopress-theme/)([Github源码](https://github.com/wallace/justin-kelly-theme))，安装方法是先进入博客目录``D:\Blog\``然后运行命令
 
-    git clone https://github.com/wallace/justin-kelly-theme.git .themes/justin-kelly-theme
-    rake install['justin-kelly-theme']
-    rake generate
+```
+git clone https://github.com/wallace/justin-kelly-theme.git .themes/justin-kelly-theme
+rake install['justin-kelly-theme']
+rake generate
+```
 
 其他不错的主题：[slash](http://zespia.tw/Octopress-Theme-Slash/index_tw.html#overview)/[Fabric](http://panks.me/blog/2013/01/new-octopress-theme-fabric/)/[BlogTheme](https://github.com/rastersize/BlogTheme)/[官方推荐](https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes)
 
 #### 六、添加分享到微博按钮
 
-在文件``source/_includes/post/sharing.html``中加入代码，效果如下
+在文件`source/_includes/post/sharing.html`中加入代码，效果如下
 
 ```
 <div class="sharing">
@@ -189,15 +214,17 @@ Git安装只需按照提示默认点击下一步，在“Configuring the line en
 
 然后在博客根目录下的配置文件``_config.yml``文件中加入代码
 
-    # Weibo
-    # Please refer to http://weibo.com/tool/weiboshow to get your uid and verifier 
-    weibo_uid: 1234567890       # your uid
-    weibo_verifier:	abc12ef3    # your verifier
-    weibo_fansline: 0   # How many lines for the fan list
-    weibo_show: true    # Whether you want your weibo content to be shown
-    weibo_pic: true     # Whether you want the pictures in weibo to be shown
-    weibo_skin: 10      # Please refer to http://weibo.com/tool/weiboshow
-    weibo_share: true   # Whether show the sharing button
+```
+# Weibo
+# Please refer to http://weibo.com/tool/weiboshow to get your uid and verifier
+weibo_uid: 1234567890       # your uid
+weibo_verifier:	abc12ef3    # your verifier
+weibo_fansline: 0   # How many lines for the fan list
+weibo_show: true    # Whether you want your weibo content to be shown
+weibo_pic: true     # Whether you want the pictures in weibo to be shown
+weibo_skin: 10      # Please refer to http://weibo.com/tool/weiboshow
+weibo_share: true   # Whether show the sharing button
+```
 
 其中uid和verifier需要去新浪``http://weibo.com/tool/weiboshow``获取。``rake generate``生成后就可以预览了。(参考链接：[为Octopress追加[分享到微博]按钮](http://programus.github.com/blog/2012/03/04/share-weibo-button/)/[增加微博的侧边栏](http://clark1231.iteye.com/blog/1553939))
 
@@ -222,6 +249,8 @@ Git安装只需按照提示默认点击下一步，在“Configuring the line en
 
 然后在配置文件``/_config.yml``中的``default_asides``或者``blog_index_asides``或者``post_asides``或者``page_asides``中添加一项``custom/asides/recent_comment.html``，例如我的配置
 
-    blog_index_asides: [custom/asides/links.html, asides/recent_posts.html, custom/asides/recent_comment.html]
+```
+blog_index_asides: [custom/asides/links.html, asides/recent_posts.html, custom/asides/recent_comment.html]
+```
 
 开启disqus评论系统只需在配置文件``/_config.yml``中设置好用户名，当然如果要尝试其他第三方评论系统可以参考链接：[为 Octopress 添加多说评论系统](http://ihavanna.org/Internet/2013-02/add-duoshuo-commemt-system-into-octopress.html)。

@@ -17,16 +17,16 @@ tags: [前端,Fiddler]
 
 ### 基本界面
 
-![基本界面](/images/20150616/f1.jpg)
-
 - 监听开关：开启或者关闭。`capturing`表示开启状态。
 - 监听类型：有 监听所有进程请求(All processes)、监听浏览器请求(Web browsers)、监听非浏览器请求(Non-Browser)和隐藏所有(Hide All)
 - 请求列表：请求列表的信息分别有 结果(Result)，协议(Protocol)，主机名(Host)，网页地址(URL)，内容大小(Body)，缓存(Caching)，响应的HTTP内容类型(Content-Type)，请求所运行的程序(Process)，注释(Comments)，自定义(Custom)
 - 功能区：包括各种数据流查看器、日志、重定向、请求构造、过滤器、时间轴、统计图表、脚本。
 
+![基本界面](/images/20150616/f1.jpg)
+
 <!--more-->
 
-###### 以下只讲具体功能操作，其他细节请[参阅官方文档](http://docs.telerik.com/fiddler/configure-fiddler/tasks/configurefiddler)和[使用搜索](http://www.bing.com/explore/)
+_以下只讲具体功能操作，其他细节请[参阅官方文档](http://docs.telerik.com/fiddler/configure-fiddler/tasks/configurefiddler)和[使用搜索](http://www.bing.com/explore/)_
 
 ### 抓取并解密HTTPS请求
 

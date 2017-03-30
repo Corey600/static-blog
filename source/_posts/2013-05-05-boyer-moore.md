@@ -2,7 +2,7 @@
 layout: post
 title: 字符串匹配的Boyer-Moore算法
 date: 2013/05/05
-toc: true
+toc: false
 category: 转载
 tags: [字符串]
 ---
