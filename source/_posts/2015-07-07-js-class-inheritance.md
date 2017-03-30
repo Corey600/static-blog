@@ -1,10 +1,10 @@
 ---
 layout: post
 title: JS的类和继承的实现方法比较
-category : 备忘
-tagline: "备忘"
-tags : [javascript,类,继承]
-excerpt_separator: <!--more-->
+date: 2015/07/07
+toc: true
+category: 备忘
+tags: [javascript,类,继承]
 ---
 
 #### 1.创建对象的各种方式对比

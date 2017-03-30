@@ -1,10 +1,10 @@
 ---
 layout: post
 title: gulp前端构建工作流
-category : 备忘
-tagline: "备忘"
-tags : [前端,gulp,webpack]
-excerpt_separator: <!--more-->
+date: 2016/06/13
+toc: true
+category: 备忘
+tags: [前端,gulp,webpack]
 ---
 
 在前端工程化中，目前最流行的是使用gulp构建前端代码。但gulp只是提供了一种流式的文件处理方式，具体的功能需要各种插件来实现。gulp插件种类繁多，各自实现了特定的功能，无法全部了解和熟悉，那么在决定构建方案的时候难免选择困难，无法快速准确地选择出自己需要插件。

@@ -1,10 +1,10 @@
 ---
 layout: post
 title: 私有NPM服务搭建
-category : 备忘
-tagline: "备忘"
-tags : [前端,npm,cnpm]
-excerpt_separator: <!--more-->
+date: 2016/07/22
+toc: true
+category: 备忘
+tags: [前端,npm,cnpm]
 ---
 
 ### 简介与背景

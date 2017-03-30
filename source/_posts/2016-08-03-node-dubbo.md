@@ -1,27 +1,27 @@
 ---
 layout: post
 title: 使用node开发dubbo远程调用客户端
-category : 备忘
-tagline: "备忘"
-tags : [前端,node,dubbo]
-excerpt_separator: <!--more-->
+date: 2016/08/03
+toc: true
+category: 备忘
+tags: [前端,node,dubbo]
 ---
 
 ### 简介
 
 >DUBBO是一个分布式服务框架，致力于提供高性能和透明化的RPC远程服务调用方案，是阿里巴巴SOA服务化治理方案的核心框架，每天为2,000+个服务提供3,000,000,000+次访问量支持，并被广泛应用于阿里巴巴集团的各成员站点。
 
-#### 基本架构如下：
-
-![architecture](/images/20160803/dubbo-architecture.jpg)
+#### 基本架构
 
 其中 Monitor 和 Container 暂时略过不讲：
 
-- Provider: 暴露服务的服务提供方。
-- Consumer: 调用远程服务的服务消费方。
-- Registry: 服务注册与发现的注册中心。
-- * Monitor: 统计服务的调用次调和调用时间的监控中心。
-- * Container: 服务运行容器。
+- **Provider: 暴露服务的服务提供方。**
+- **Consumer: 调用远程服务的服务消费方。**
+- **Registry: 服务注册与发现的注册中心。**
+- Monitor: 统计服务的调用次调和调用时间的监控中心。
+- Container: 服务运行容器。
+
+![architecture](/images/20160803/dubbo-architecture.jpg)
 
 <!--more-->
 
@@ -241,7 +241,7 @@ _参考链接_ : [Dubbo实例](http://www.tuicool.com/articles/bYfIBfU)
 
 #### 编解码及序列化
 
-###### 发送的传输协议格式
+##### 发送的传输协议格式
 
 协议头为定长 16个字节（128位）
 
@@ -264,7 +264,7 @@ _参考链接_ : [Dubbo实例](http://www.tuicool.com/articles/bYfIBfU)
 其中，方法的参数必须符合 java 类型表示的方法，具体可以参考模块说明： [js-to-java](https://github.com/node-modules/js-to-java)
 
 
-###### 接收的传输协议格式
+##### 接收的传输协议格式
 
 ![parse](/images/20160803/dubbo_protocol_header.jpg)
 

@@ -77,7 +77,7 @@ deploy:
 Plugins:
   - hexo-generator-feed
 
-#Feed Atom
+# Feed Atom
 feed:
   type: atom
   path: atom.xml

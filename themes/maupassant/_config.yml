@@ -30,9 +30,9 @@ menu:
 
 widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.
   - search
-  - tag
-  - recent_posts
   - category
+  - recent_posts
+  - tag
 
 links:
   - title: site-name1

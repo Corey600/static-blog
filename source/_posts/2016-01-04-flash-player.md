@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Flash播放器研究
-category : 备忘
-tagline: "备忘"
-tags : [flash, 播放器]
-excerpt_separator: <!--more-->
+date: 2016/01/04
+toc: true
+category: 备忘
+tags: [flash, 播放器]
 ---
 
 ### 背景

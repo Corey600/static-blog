@@ -1,10 +1,10 @@
 ---
 layout: post
 title: 字符串匹配的Boyer-Moore算法
-category : 转载
-tagline: "转载"
-tags : [字符串]
-excerpt_separator: <!--more-->
+date: 2013/05/05
+toc: true
+category: 转载
+tags: [字符串]
 ---
 
 阮一峰大神贴的感觉很不错的字符串算法，转载过来以备以后查看。

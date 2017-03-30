@@ -1,10 +1,14 @@
 ---
 layout: post
 title: 完善TQ2440上Linux-2.6.32.59的串口驱动
-category : 备忘
-tagline: "备忘"
-tags : [TQ2440, Linux, 串口]
-excerpt_separator: <!--more-->
+date: 2012/09/06
+toc: true
+category:
+  - 备忘
+tags:
+  - TQ2440
+  - Linux
+  - 串口
 ---
 
 修改内核源码``arch/arm/mach-s3c2440/mach-smdk2440.c``文件的100行，将其改为：

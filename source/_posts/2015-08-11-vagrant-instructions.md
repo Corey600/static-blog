@@ -1,10 +1,10 @@
 ---
 layout: post
 title: 使用vagrant虚拟机开发调试
-category : 备忘
-tagline: "备忘"
-tags : [vagrant, nfs, fis]
-excerpt_separator: <!--more-->
+date: 2015/08/11
+toc: true
+category: 备忘
+tags: [vagrant, nfs, fis]
 ---
 
 ### vagrant介绍和简单使用

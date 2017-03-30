@@ -1,10 +1,10 @@
 ---
 layout: post
 title: 标准库函数mktime与夏令时
-category : 备忘
-tagline: "备忘"
-tags : [C++,夏令时]
-excerpt_separator: <!--more-->
+date: 2014/09/18
+toc: true
+category: 备忘
+tags: [C++,夏令时]
 ---
 
 #### 1.现象描述
@@ -165,4 +165,3 @@ MSDN里面对mktime的说明有下面这么一句话：
 > After an adjustment to UTC, _mktime32 handles dates from midnight, January 1, 1970, to 03:14:07, January 19, 2038. _mktime64 handles dates from midnight, January 1, 1970 to 23:59:59, December 31, 3000. This adjustment may cause these functions to return -1 (cast to time_t, __time32_t or __time64_t) even though the date you specify is within range. For example, if you are in Cairo, Egypt, which is two hours ahead of UTC, two hours will first be subtracted from the date you specify in timeptr; this may now put your date out of range.
 
 意思大概说的是mktime把时间转换为时间戳并调整为UTC标准时间以后的时间范围。而后面一句说，这种调整为UTC标准的做法会引起函数返回-1，也就是说超出范围。比如你在埃及开罗，它比标准时间早两个小时，即使你在埃及时间是在“midnight, January 1, 1970, to 03:14:07, January 19, 2038”范围内，调用mktime，将转换为UTC时间，也就是加上两个小时就可能超出范围，函数返回-1。这就变相的在说明，mktime的时间转换是会默认认为你传入的时间是本地时间，而基准1970年1月1日则是UTC标准时间，那就先要将你传入的时间根据本机时区转换成UTC时间，再计算时间戳。也就是说在不同的本机系统时区下面，传入相同的年月日几分几秒得到的时间戳是不同的。
- 

@@ -1,10 +1,10 @@
 ---
 layout: post
 title: 用Github和Octopress搭建博客
-category : 备忘
-tagline: "备忘"
-tags : [Github, Octopress]
-excerpt_separator: <!--more-->
+date: 2013/02/28
+toc: true
+category: 备忘
+tags: [Github, Octopress]
 ---
 
 最先玩过[网易博客](http://cheesefan.blog.163.com/),但是网易博客广告太多（虽然相比同类型的第三方托管博客广告要少很多，这也是最初选择它的原因），同时定制性太差，代码高亮也在部分主题下面也显示得不是太好。后来分别在[新浪SAE](http://sae.sina.com.cn/)和[百度BAE](http://developer.baidu.com/bae)上搭建过[WordPress](http://cn.wordpress.org/)的博客，[WordPress](http://cn.wordpress.org/)有丰富的主题插件资源，但正是由于它功能太过完善，显得它有点庞大，加载速度让我难以接受。

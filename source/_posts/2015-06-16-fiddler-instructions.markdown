@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Fiddler使用说明
-category : 备忘
-tagline: "备忘"
-tags : [前端,Fiddler]
-excerpt_separator: <!--more-->
+date: 2015/06/16
+toc: true
+category: 备忘
+tags: [前端,Fiddler]
 ---
 
 ### 介绍
