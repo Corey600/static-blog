@@ -81,4 +81,4 @@ Plugins:
 feed:
   type: atom
   path: atom.xml
-  limit: 30
+  limit: 10

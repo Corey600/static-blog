@@ -1,10 +1,12 @@
 ---
 layout: post
 title: Linux命令行总汇(20120922更新)
-category : 备忘
-tagline: "备忘"
-tags : [Linux]
-excerpt_separator: <!--more-->
+date: 2012/08/31
+updated: 2012/09/22
+category:
+  - 备忘
+tags:
+  - Linux
 ---
 
 #### 1.修改全局环境变量操作
@@ -20,14 +22,16 @@ excerpt_separator: <!--more-->
 ##### 小技巧：
 其实如果打开``/etc/profile``，在最后我们可以发现有这样一段代码：
 
-	if [ -d /etc/profile.d ]; then
-	  for i in /etc/profile.d/*.sh; do
-	    if [ -r $i ]; then
-	      . $i
-	    fi
-	  done
-	  unset i
-	fi
+```
+if [ -d /etc/profile.d ]; then
+  for i in /etc/profile.d/*.sh; do
+    if [ -r $i ]; then
+      . $i
+    fi
+  done
+  unset i
+fi
+```
 
 <!--more-->
 
